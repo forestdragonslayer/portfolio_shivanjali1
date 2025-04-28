@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.photo-glow {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.photo-glow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #00ffff;
+  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff, 0 0 100px #00ffff;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+  }
+  to {
+    box-shadow: 0 0 40px #00ffff, 0 0 80px #00ffff, 0 0 120px #00ffff;
+  }
+}
+
+.text-content {
+  max-width: 600px;
+}
+
+.text-content h1 span {
+  color: #00ffff;
+}
+
+.text-content h2 {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #00ffff;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.skills-container span {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 2px solid #00ffff;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.skills-container span:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.project-card:hover {
+  transform: rotateY(10deg);
+  background: rgba(0, 255, 255, 0.2);
+}
+
+a {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffff00;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+}
